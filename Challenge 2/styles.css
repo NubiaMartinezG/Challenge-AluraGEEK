@@ -1,0 +1,135 @@
+/* Colores */
+:root {
+    --color-principal: #5D04D9;
+    --color-secundario: #03318C;
+    --color-terciario: #9303A6;
+    --color-fondo: #f8f8f8;
+    --color-texto: #333;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic Medium';
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.header {
+    background-color: var(--color-principal);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Sección de productos (fotos) */
+.productos {
+    flex: 2;
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 8px;
+    color: black;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres productos por línea */
+    gap: 20px; /* Espacio entre los productos */
+}
+
+.producto {
+    background-color: var(--color-principal);
+    color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.borrar-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Sección del formulario */
+.formulario {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 50px;
+    color: black;
+}
+
+.formulario form input,
+.formulario form button {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 10px; 
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.formulario form input[type="text"] {
+    border: 2px solid var(--color-principal);
+    margin: 10px; /* Espacio entre los elementos */ 
+    padding: 10px; 
+    width: 100%;
+    border-radius: 8px; /* Redondear los bordes */
+}
+
+.formulario form .botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario form button[type="submit"] {
+    background-color: var(--color-secundario);
+    color: white;
+    cursor: pointer;
+    width: 48%; /* Para que los botones ocupen el mismo espacio */
+}
+
+.formulario form button[type="reset"] {
+    background-color: white;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-secundario);
+    cursor: pointer;
+    width: 48%; /* Para que los botones ocupen el mismo espacio */
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
